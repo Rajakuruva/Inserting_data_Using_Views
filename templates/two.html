@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <tr>
+                <th>Topic_name</th>
+                <th>name</th>
+                <th>country</th>
+                <th>email</th>
+            </tr>
+            {% for x in Web %}
+                {% if x.name == 'Dhoni' %}
+                    <tr>
+                        <td>{{x.Topic_name}}</td>
+                        <td>{{x.name}}</td>
+                        <td>  </td>
+                        <td>{{x.email}}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td>{{x.Topic_name}}</td>
+                        <td>{{x.name}}</td>
+                        <td>{{x.country}}</td>
+                        <td>{{x.email}}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
